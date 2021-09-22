@@ -1,0 +1,13 @@
+<%= render 'books/userinfo', user: @user %>
+<%= render 'books/newbook', book: @book %>
+  
+  
+<h1>Books</h1>
+<%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+
+<%= link_to book_path(@books) do %>
+        <p class="caption h4"><%= @books.title %> </p>
+<% end %>
+<h3 >
+    <%= @books.opinion%>      
+</h3>

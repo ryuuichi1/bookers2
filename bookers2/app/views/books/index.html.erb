@@ -1,0 +1,11 @@
+<%= render 'books/userinfo', user: @user %>
+<%= render 'books/newbook', book: @book %>
+<% @books.each do |book| %>
+  <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+  <div class="one-post card w-100">
+   <%= link_to book_path(book) do %>
+    <p class="caption h4"><%= book.title %></p>
+   <% end %>
+   <p class="caption h4"><%= book.opinion %></p>
+  </div>
+<% end %>
