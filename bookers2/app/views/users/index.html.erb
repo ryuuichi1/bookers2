@@ -7,7 +7,7 @@
       <h1 class="font-weight-normal mt-5 mb-5">ユーザー一覧</h1>
     </div>
     <div class="row justify-content-center">
-      <% @user.each do |user| %>
+      <% @users.each do |user| %>
       <div class="one-post card w-100">
         <p><%= user.name %></p>
         <%= link_to user_path(user) do %>
